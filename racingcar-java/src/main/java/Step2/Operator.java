@@ -12,7 +12,7 @@ enum Operator {
     PLUS("+", (first, second) -> first + second),   // 더하기
     MINUS("-", (first, second) -> first - second),  // 빼기
     MULTIPLY("*", (first, second) -> first * second),   // 곱하기
-    DVIDE("/", (first, second) -> { // 나누기
+    DIVIDE("/", (first, second) -> { // 나누기
        if(second == 0) throw new IllegalArgumentException();    // 나눠지는 수 예외 던지기
        return first / second;
     });
