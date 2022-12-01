@@ -9,11 +9,16 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         InputView inputView = new InputView();
-        inputView.input();
+        inputView.inputCarCount();
+        inputView.inputNames();
+        inputView.inputRaceCount();
+
         OutputView outputView = new OutputView();
         outputView.showResult();
+
         Racing racing = new Racing();
         racing.carReady(inputView.getCarCount());
-        racing.carMove(inputView.getCarCount(), inputView.getRaceCount());
+        racing.carMove(inputView.getCarCount(), inputView.getRaceCount(), inputView.getNames());
+        racing.raceWinner(inputView.getCarCount(), inputView.getNames());
     }
 }
